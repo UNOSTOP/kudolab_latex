@@ -1,0 +1,75 @@
+
+// 左下歯車から「設定(Settings)」 タブを開きます。
+// 「設定の検索」フィールドに適切な用語を入力して必要な設定を絞り込むことができます。
+// ex.) latex-workshop>latex>autoClean>run
+// 代表的な設定はこの画面上で設定できますが，詳細な設定は settings.json に直接書きこみます。
+
+{
+    // ===== Setting of Latex-workshop in VScode =====
+    // 使用パッケージのコマンドや環境の補完を有効にする
+    "latex-workshop.intellisense.package.enabled": true,
+    // 保存時に自動でBuildを実行する
+	"latex-workshop.latex.autoBuild.run": "onSave",
+    // 生成ファイルを現在のディレクトリに吐き出す
+    "latex-workshop.latex.outDir": "out",
+
+    // ビルドのレシピ
+    "latex-workshop.latex.recipes": [
+        {
+            "name": "latexmk",
+                "tools": ["latexmk(.latexmkrc)"]
+        },
+    ],
+    
+    // ビルドのレシピに使われるパーツ
+    "latex-workshop.latex.tools": [
+        {
+            "name": "latexmk(.latexmkrc)",
+            "command": "latexmk",
+            "args": [
+                //"-pv",// ビルド後にpdfを表示
+                "-synctex=1",// PDFとTeXファイル間をジャンプ
+                "-file-line-error",// エラー箇所にジャンプ
+                //"-halt-on-error",// エラーが出た時点でコンパイルを強制終了
+                "-interaction=nonstopmode",// 重大なエラー以外は適当に処理してエラーや警告としてターミナルログに出力
+                //"-pdfdvi",// latexmkに対してDVIではなくPDFファイルを生成するように指示
+                "-outdir=%OUTDIR%",
+                "%DOC%"
+            ],
+        },
+    ],
+
+    // tex-workshopで紐づけられているPDF表示コマンドで表示するPDFビューア
+    // タブは自動で開いてくれずCtrl+Alt+vが必要
+    "latex-workshop.view.pdf.viewer": "tab",
+
+    // 補助ファイルの自動消去設定
+    "latex-workshop.latex.clean.enabled":true,
+    "latex-workshop.latex.clean.method": "glob",
+    "latex-workshop.latex.autoClean.run": "onBuilt",
+    "latex-workshop.latex.clean.fileTypes": [
+        "*.aux",
+        "*.bbl",
+        "*.blg",
+        "*.idx",
+        "*.ind",
+        "*.lof",
+        "*.lot",
+        "*.out",
+        "*.toc",
+        "*.acn",
+        "*.acr",
+        "*.alg",
+        "*.glg",
+        "*.glo",
+        "*.gls",
+        "*.ist",
+        "*.fls",
+        "*.log",
+        "*.fdb_latexmk",
+        "*.dvi",
+        // synctexを使用しない場合は削除してもよい
+        // PDF>TEX:Ctrl+クリック. TEX>PDF:Ctrl+Alt+j.
+        //"*.synctex.gz"
+    ],
+}
