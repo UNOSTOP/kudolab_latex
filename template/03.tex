@@ -1,0 +1,40 @@
+\chapter{参考文献の書き方}
+\vspace{20mm}\hrulefill\\\vspace{20mm}
+
+この章では、参考文献の書き方について、記載する。
+前章、前前章でもお伝えしたが、ここに記載しているのはあくまでも最低限です。
+詳しくTexについて学びたい方は、Googleで"3人そろってにしたん"などで検索して、♪勝手に、にしたんたんたんたーんしてください。
+
+\newpage
+
+\section{参考文献}
+
+このテンプレートでは、Bibtexを使用して参考文献の作成を行っています。
+参考文献のデータベースを.bibという拡張子のファイルに書き込んでいきます。
+書き方としては、@Articleや@Bookなどから\{\}の中身までが文献１つにあたる。
+@の次が文献の種別を表すもので、表１のような種類がある。
+
+\begin{table}[H]
+	\caption{BibTeXの文献種別と一言説明}\label{tab:bibtex-entry-types}
+	\vspace{-5mm}
+	\begin{center}
+		\begin{tabular}{cc}
+		\hline
+	  	\normalfont\textbf{文献種別} & \normalfont\textbf{一言説明} \\\hline
+	  	article & 学術論文（雑誌論文や雑誌記事） \\
+	  	book & 単行本 \\
+		online & オンライン資料 \\
+	  	booklet & 書籍全体ではなく、印刷物全体に対する参照 \\
+	  	inbook & 本の中の一部（章や節など） \\
+	  	incollection & 編集された本や論文集の中の一部 \\
+	  	inproceedings & 学会論文集や会議録の中の一部 \\
+	  	manual & マニュアルや技術的なドキュメント \\
+	  	mastersthesis & 修士論文 \\
+	  	misc & 他のどの種別にも合致しないもの \\
+	  	phdthesis & 博士論文 \\
+	  	proceedings & 学会論文集や会議録全体 \\
+	  	techreport & 研究所や大学のテクニカルレポート \\
+	  	unpublished & 公式に発表されていない文献 \\\hline
+		\end{tabular}
+	\end{center}
+\end{table}

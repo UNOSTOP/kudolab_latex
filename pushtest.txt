@@ -1,3 +1,0 @@
-pushtest.txtの内容
-
-pushtest!

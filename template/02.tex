@@ -1,0 +1,62 @@
+\chapter{数式・特殊文字}
+\vspace{20mm}\hrulefill\\\vspace{20mm}
+
+この章では、数式・特殊文字の書き方について、記載する。
+前章でもお伝えしたが、ここに記載しているのはあくまでも最低限です。
+詳しくTexについて学びたい方は、Googleで"謎肉 スースキス カップラーメン"などで検索して、♪勝手に スースキス スキスしてください。
+
+\newpage
+
+\section{数式}
+LaTeXで数式を書くためには、いくつかの方法があります。
+以下に、基本的な数式の書き方を示す。
+\begin{enumerate}
+	\item インライン数式
+	
+		インライン数式は、テキスト内に数式を埋め込む場合に使用する。
+		数式を $ ... $で挟んで使います。
+		
+		ex.これはインライン数式 $E=mc^2$ です。
+
+	\item ディスプレイ数式
+	
+		ディスプレイ数式は、独立した行に数式を表示する場合に使用されます。
+		'equation'環境を使用します。
+		
+		ex.これはディスプレイ数式です：
+		\begin{equation}
+			\int_{0}^{\pi} \sin(x) \, dx = 2
+		\end{equation}
+
+		\begin{eqnarray}
+			E_0 = {K}\cdot{I_0}\cdot{R_L}\ /\ {n}\  [\ \mathrm{V_{rms}}\ ]
+		\end{eqnarray}
+
+\end{enumerate}
+
+\section{特殊文字}
+Latexにはたくさんの特殊文字があります。
+全部書ききれるわけがないので、適当にリストアップしたものを示します。
+その他、コードを忘れた場合は、VScode左バーにある"TEX"＞"SNIPET VIEW"から選択するのもいいだろう。
+
+\begin{enumerate}
+	\item 数学記号と演算子
+	
+	$\alpha, \beta, \gamma, \theta, \pi, \sqrt{x}, \frac{1}{2}, \sum_{i=1}^{n} x_i, \int_{a}^{b} f(x) \, dx$
+
+	\item 上付き文字と下付き文字
+
+	$x^2, a_{ij}, e^{i\theta}, \lim_{x \to \infty}$
+
+	\item 分数
+	
+	$\frac{a}{b}, \frac{\sqrt{2}}{2}$
+
+	\item 行列
+	
+	$\begin{bmatrix}
+		1 & 2 \\
+		3 & 4
+	\end{bmatrix}$
+
+\end{enumerate}

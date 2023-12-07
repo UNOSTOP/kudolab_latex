@@ -1,0 +1,37 @@
+\chapter{}\label{chap:appendixA}
+\vspace{20mm}\hrulefill\\\vspace{20mm}
+
+\section{制作したプログラム}
+
+\begin{lstlisting}[caption=greeting.py,label=greeting.py]
+    # ユーザーに名前を尋ねて挨拶するプログラム
+
+    # ユーザーに名前を尋ねる
+    name = input("あなたの名前は何ですか？ ")
+    
+    # 名前を使って挨拶する
+    print("こんにちは、" + name + "さん！")
+\end{lstlisting}
+
+\section{面白いプログラム}
+
+\begin{lstlisting}[caption=tell\_joke.py,label=joke.py]
+    import random
+
+    def tell_joke():
+        jokes = [
+            "なぜプログラマーはコーヒーを飲むのですか？因数分解です。",
+            "なぜPythonはクールですか？冷静なエンジニアが作ったから。",
+            "なぜコンピュータは冷たい飲み物が好きですか？氷が付いてくるから。",
+            "なぜサーバーはいいことを言わないのですか？お世辞を言うとサービスがダウンします。",
+            "なぜプログラマーは山登りが好きですか？山がピークだから。",
+        ]
+    
+        joke = random.choice(jokes)
+        print("ジョーク: " + joke)
+    
+    # ジョークを表示
+    tell_joke()
+    
+
+\end{lstlisting}
