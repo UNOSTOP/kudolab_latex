@@ -72,4 +72,7 @@
         // PDF>TEX:Ctrl+クリック. TEX>PDF:Ctrl+Alt+j.
         //"*.synctex.gz"
     ],
+    
+    // エンコーディングの自動判別
+    "files.autoGuessEncoding": true
 }
