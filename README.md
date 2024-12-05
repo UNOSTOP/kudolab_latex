@@ -35,6 +35,7 @@
   * Windows
 
     [公式](https://www.tug.org/texlive/acquire-netinstall.html)のinstall-tl-windows.exeをクリックしてダウンロード、GUIのインストーラに従ってください。
+    20241205修正[公式](https://ftp.riken.jp/CTAN/systems/texlive/Images/)のexlive2024-20240312.isoをクリックしてダウンロード、GUIのインストーラに従ってください。
 
   * Mac
 
